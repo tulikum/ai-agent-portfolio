@@ -1,0 +1,872 @@
+
+/* =========================================
+   TULI KUMARI — AI AGENT PORTFOLIO
+   Theme: Black + Electric Blue
+========================================= */
+
+/* GLOBAL */
+
+:root {
+  font-family: Inter, Arial, sans-serif;
+  color: #ffffff;
+  background: #030910;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  background: #030910;
+  color: #ffffff;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button {
+  font: inherit;
+}
+
+#root {
+  width: 100%;
+  max-width: none;
+  min-height: 100vh;
+  margin: 0;
+  padding: 0;
+  text-align: left;
+}
+
+.portfolio {
+  width: 100%;
+  min-height: 100vh;
+  overflow: hidden;
+  background: #030910;
+  color: #ffffff;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: #ffffff;
+}
+
+/* =========================================
+   NAVIGATION
+========================================= */
+
+.navbar {
+  width: 100%;
+  max-width: 1500px;
+  margin: 0 auto;
+  padding: 24px 6%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 24px;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  flex-shrink: 0;
+}
+
+.brand-logo {
+  font-size: 38px;
+  font-weight: 800;
+  letter-spacing: -7px;
+  padding-right: 8px;
+  color: #ffffff;
+}
+
+.brand-logo span {
+  color: #008cff;
+}
+
+.brand-info strong {
+  display: block;
+  font-size: 21px;
+  color: #ffffff;
+}
+
+.brand-info > span {
+  display: block;
+  color: #94a3b8;
+  margin-top: 3px;
+  font-size: 14px;
+}
+
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 34px;
+}
+
+.nav-links a {
+  font-size: 15px;
+  color: #cbd5e1;
+  transition: color 0.2s;
+}
+
+.nav-links a:hover,
+.nav-links a:first-child {
+  color: #009dff;
+}
+
+.github-button {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 11px 19px;
+  border: 1px solid #45546b;
+  border-radius: 9px;
+  font-size: 14px;
+  white-space: nowrap;
+  transition: border-color 0.2s;
+}
+
+.github-button:hover {
+  border-color: #008cff;
+}
+
+/* =========================================
+   HERO SECTION
+========================================= */
+
+.hero {
+  width: 100%;
+  max-width: 1500px;
+  margin: 0 auto;
+  padding: 100px 6% 95px;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  align-items: center;
+  gap: 45px;
+}
+
+.hero-content {
+  text-align: left;
+  max-width: 650px;
+}
+
+.eyebrow,
+.section-label {
+  color: #38bdf8;
+  font-size: 12px;
+  letter-spacing: 3px;
+  font-weight: 700;
+}
+
+.hero h1 {
+  color: #ffffff;
+  font-size: clamp(42px, 4.7vw, 72px);
+  line-height: 1.12;
+  letter-spacing: -2.5px;
+  margin: 24px 0;
+}
+
+.hero h1 span {
+  color: #008cff;
+}
+
+.hero-description {
+  color: #cbd5e1;
+  font-size: 17px;
+  line-height: 1.75;
+  max-width: 580px;
+  text-align: left;
+}
+
+.hero-actions,
+.contact-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  margin-top: 30px;
+}
+
+.primary-button,
+.secondary-button {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  gap: 11px;
+  padding: 15px 23px;
+  border-radius: 9px;
+  font-size: 14px;
+  font-weight: 600;
+  transition:
+    background 0.2s,
+    transform 0.2s,
+    border-color 0.2s;
+}
+
+.primary-button {
+  background: #007bff;
+  color: #ffffff;
+}
+
+.primary-button:hover {
+  background: #0064d6;
+  transform: translateY(-2px);
+}
+
+.secondary-button {
+  border: 1px solid #008cff;
+  color: #ffffff;
+}
+
+.secondary-button:hover {
+  background: #09233c;
+}
+
+/* =========================================
+   ELECTRIC BLUE AI VISUAL
+========================================= */
+
+.hero-visual {
+  position: relative;
+  width: 100%;
+  height: 370px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  isolation: isolate;
+}
+
+.hero-visual::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 85%;
+  background: radial-gradient(
+    ellipse,
+    rgba(0, 119, 255, 0.22),
+    transparent 68%
+  );
+  z-index: -1;
+}
+
+.ai-chip {
+  width: 215px;
+  height: 215px;
+  border-radius: 34px;
+  background: linear-gradient(
+    145deg,
+    #008cff,
+    #00345e
+  );
+  padding: 5px;
+  transform: rotate(-12deg);
+  box-shadow:
+    0 0 45px rgba(0, 136, 255, 0.5),
+    0 25px 70px rgba(0, 102, 255, 0.3);
+  position: relative;
+  z-index: 2;
+}
+
+.chip-inner {
+  width: 100%;
+  height: 100%;
+  border-radius: 29px;
+  background: linear-gradient(
+    145deg,
+    #0d3155,
+    #050b16
+  );
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 100px;
+  font-weight: 800;
+  color: #ffffff;
+  text-shadow:
+    0 0 25px rgba(0, 170, 255, 0.8);
+}
+
+.wave {
+  position: absolute;
+  width: 110%;
+  height: 110px;
+  border-top: 2px solid #008cff;
+  border-radius: 50%;
+  filter: drop-shadow(0 0 9px #008cff);
+  transform: rotate(-12deg);
+  opacity: 0.85;
+}
+
+.wave-one {
+  top: 37%;
+}
+
+.wave-two {
+  top: 49%;
+  transform: rotate(10deg);
+  opacity: 0.6;
+}
+
+.wave-three {
+  top: 59%;
+  transform: rotate(-5deg);
+  opacity: 0.35;
+}
+
+.visual-glow {
+  position: absolute;
+  width: 250px;
+  height: 50px;
+  background: #007bff;
+  filter: blur(65px);
+  bottom: 45px;
+  opacity: 0.6;
+}
+
+/* =========================================
+   STATISTICS
+========================================= */
+
+.stats-section {
+  width: 100%;
+  max-width: 1350px;
+  margin: 0 auto;
+  padding: 25px 5% 55px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  border-bottom: 1px solid #172335;
+}
+
+.stat-item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 18px;
+  padding: 10px 20px;
+  border-right: 1px solid #263648;
+}
+
+.stat-item:last-child {
+  border-right: none;
+}
+
+.stat-item svg {
+  color: #009dff;
+  flex-shrink: 0;
+}
+
+.stat-item strong {
+  display: block;
+  font-size: 19px;
+  color: #ffffff;
+}
+
+.stat-item span {
+  display: block;
+  font-size: 12px;
+  color: #94a3b8;
+  margin-top: 5px;
+}
+
+/* =========================================
+   FEATURED AI AGENTS
+========================================= */
+
+.agents-section,
+.content-section {
+  width: 100%;
+  max-width: 1500px;
+  margin: 0 auto;
+  padding: 90px 6%;
+}
+
+.section-heading {
+  text-align: center;
+  margin-bottom: 45px;
+}
+
+.section-heading h2 {
+  color: #ffffff;
+  font-size: 36px;
+  letter-spacing: -1px;
+  margin: 14px 0;
+}
+
+.section-heading p {
+  color: #94a3b8;
+  font-size: 16px;
+}
+
+.agents-grid {
+  display: grid;
+  grid-template-columns:
+    repeat(4, minmax(0, 1fr));
+  gap: 22px;
+}
+
+.agent-card {
+  padding: 25px;
+  background: linear-gradient(
+    150deg,
+    #0b1623,
+    #071019
+  );
+  border: 1px solid #263c51;
+  border-radius: 15px;
+  display: flex;
+  flex-direction: column;
+  transition:
+    transform 0.2s,
+    border-color 0.2s;
+}
+
+.agent-card:hover {
+  transform: translateY(-5px);
+  border-color: #008cff;
+}
+
+.agent-icon {
+  width: 50px;
+  height: 50px;
+  background: #062b4c;
+  color: #00aaff;
+  border-radius: 11px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.agent-card h3 {
+  color: #ffffff;
+  font-size: 20px;
+  margin: 0 0 12px;
+}
+
+.agent-description {
+  color: #a7b5c6;
+  font-size: 14px;
+  line-height: 1.7;
+  flex: 1;
+}
+
+.tech-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin: 20px 0;
+}
+
+.tech-tags span,
+.skills span {
+  padding: 6px 11px;
+  border-radius: 20px;
+  background: #1a2a3b;
+  color: #d0dbe7;
+  font-size: 12px;
+}
+
+.agent-footer {
+  padding-top: 8px;
+}
+
+.agent-footer a {
+  color: #00b7ff;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.coming-soon {
+  color: #7dd3fc;
+  font-size: 13px;
+}
+
+/* =========================================
+   PROJECTS
+========================================= */
+
+.content-section {
+  border-top: 1px solid #172335;
+}
+
+.empty-projects {
+  max-width: 600px;
+  margin: 0 auto;
+  text-align: center;
+  border: 1px dashed #2a4156;
+  border-radius: 14px;
+  padding: 45px 25px;
+}
+
+.empty-projects svg {
+  color: #009dff;
+}
+
+.empty-projects h3 {
+  color: #ffffff;
+  font-size: 20px;
+}
+
+.empty-projects p {
+  color: #94a3b8;
+  line-height: 1.7;
+}
+
+/* =========================================
+   ABOUT
+========================================= */
+
+.about-section {
+  border-top: 1px solid #172335;
+  padding: 90px 6%;
+}
+
+.about-content {
+  max-width: 850px;
+  margin: 0 auto;
+}
+
+.about-content h2 {
+  color: #ffffff;
+  font-size: 40px;
+  margin: 15px 0;
+}
+
+.about-content h3 {
+  color: #38bdf8;
+  font-size: 20px;
+  font-weight: 500;
+}
+
+.about-content p {
+  color: #a7b5c6;
+  font-size: 16px;
+  line-height: 1.9;
+}
+
+.skills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 28px;
+}
+
+/* =========================================
+   CONTACT
+========================================= */
+
+.contact-section {
+  border-top: 1px solid #172335;
+  text-align: center;
+  padding: 100px 6%;
+  background: radial-gradient(
+    ellipse at bottom,
+    #081c31,
+    #030910 70%
+  );
+}
+
+.contact-section h2 {
+  color: #ffffff;
+  font-size: 38px;
+  margin: 16px 0;
+}
+
+.contact-section p {
+  color: #94a3b8;
+  line-height: 1.8;
+}
+
+.contact-actions {
+  justify-content: center;
+}
+
+/* =========================================
+   FOOTER
+========================================= */
+
+.footer {
+  border-top: 1px solid #172335;
+  padding: 25px 6%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+  color: #94a3b8;
+  font-size: 13px;
+}
+
+/* =========================================
+   RESPONSIVE DESIGN
+========================================= */
+
+@media (max-width: 1100px) {
+  .agents-grid {
+    grid-template-columns:
+      repeat(2, minmax(0, 1fr));
+  }
+
+  .nav-links {
+    gap: 18px;
+  }
+
+  .stats-section {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+
+  .stat-item:nth-child(2) {
+    border-right: none;
+  }
+}
+
+@media (max-width: 800px) {
+  .navbar {
+    flex-wrap: wrap;
+  }
+
+  .nav-links {
+    order: 3;
+    width: 100%;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  .hero {
+    grid-template-columns: 1fr;
+    padding-top: 65px;
+    padding-bottom: 50px;
+  }
+
+  .hero-visual {
+    height: 300px;
+  }
+
+  .ai-chip {
+    width: 170px;
+    height: 170px;
+  }
+
+  .chip-inner {
+    font-size: 76px;
+  }
+}
+
+@media (max-width: 600px) {
+  .navbar {
+    padding-top: 20px;
+  }
+
+  .brand-info strong {
+    font-size: 17px;
+  }
+
+  .github-button {
+    padding: 9px;
+    font-size: 12px;
+  }
+
+  .hero h1 {
+    font-size: 42px;
+  }
+
+  .hero-description {
+    font-size: 15px;
+  }
+
+  .agents-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .stats-section {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .stat-item {
+    padding: 10px;
+    gap: 10px;
+  }
+
+  .stat-item strong {
+    font-size: 15px;
+  }
+
+  .stat-item span {
+    font-size: 11px;
+  }
+
+  .section-heading h2,
+  .contact-section h2 {
+    font-size: 29px;
+  }
+
+  .footer {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+}
+
+/* =========================================
+   COMPACT VERTICAL SPACING — ALL SECTIONS
+========================================= */
+
+/* Navigation */
+.navbar {
+  padding-top: 16px;
+  padding-bottom: 16px;
+}
+
+/* Hero */
+.hero {
+  padding-top: 55px;
+  padding-bottom: 45px;
+  gap: 30px;
+}
+
+.hero h1 {
+  margin-top: 16px;
+  margin-bottom: 16px;
+}
+
+.hero-actions {
+  margin-top: 22px;
+}
+
+.hero-visual {
+  height: 310px;
+}
+
+/* Statistics */
+.stats-section {
+  padding-top: 15px;
+  padding-bottom: 25px;
+}
+
+/* AI Agents and Projects */
+.agents-section,
+.content-section {
+  padding-top: 45px;
+  padding-bottom: 45px;
+}
+
+/* Section headings */
+.section-heading {
+  margin-bottom: 28px;
+}
+
+.section-heading h2 {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.section-heading p {
+  margin-top: 8px;
+  margin-bottom: 0;
+}
+
+/* Agent cards */
+.agent-card {
+  padding: 22px;
+}
+
+.agent-icon {
+  margin-bottom: 14px;
+}
+
+.agent-card h3 {
+  margin-bottom: 8px;
+}
+
+.tech-tags {
+  margin-top: 14px;
+  margin-bottom: 14px;
+}
+
+/* Projects placeholder */
+.empty-projects {
+  padding: 28px 22px;
+}
+
+/* About */
+.about-section {
+  padding-top: 45px;
+  padding-bottom: 45px;
+}
+
+.about-content h2 {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.about-content p {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.skills {
+  margin-top: 18px;
+}
+
+/* Contact */
+.contact-section {
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+
+.contact-section h2 {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.contact-actions {
+  margin-top: 22px;
+}
+
+/* Footer */
+.footer {
+  padding-top: 18px;
+  padding-bottom: 18px;
+}
+
+/* Mobile */
+@media (max-width: 800px) {
+  .hero {
+    padding-top: 35px;
+    padding-bottom: 30px;
+  }
+
+  .hero-visual {
+    height: 260px;
+  }
+
+  .agents-section,
+  .content-section,
+  .about-section {
+    padding-top: 35px;
+    padding-bottom: 35px;
+  }
+
+  .contact-section {
+    padding-top: 40px;
+    padding-bottom: 40px;
+  }
+}
+
+
